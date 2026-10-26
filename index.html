@@ -11,7 +11,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="./manifest.webmanifest">
-<title>GameZone Bah V65 Gym4 — Gérant</title>
+<title>GameZone Bah V63 — Gérant</title>
 <style>
 :root{--bg:#0d0d1a;--surface:#13131f;--card:#1a1a2e;--border:#252540;--ac:#7c3aed;--acl:#a855f7;--neon:#c084fc;--green:#22c55e;--red:#ef4444;--yellow:#eab308;--blue:#3b82f6;--text:#f1f0ff;--muted:#6b7280;--sub:#9ca3af;--fd:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;--fb:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;--r:14px;--rs:9px}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -297,7 +297,6 @@ button,.ni,.pc-btn{touch-action:manipulation}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 
-<script src="./management.js?v=manuel16"></script><script>window.GZ_CUSTOM_ROLE="GERANT";</script><script src="./custom-time.js?v=manuel16"></script>
 <script>
 /* GAMEZONE VOIX HOMME : réglage local à chaque appareil, aucune écriture Firebase. */
 (function(){
@@ -383,41 +382,11 @@ button,.ni,.pc-btn{touch-action:manipulation}
     b.title='Notifications autorisées sur ce téléphone';
    }catch(err){alert('Impossible d’activer les notifications : '+err.message);}
   };
-  const clock=bar.querySelector('.tclock');if(clock&&clock.parentElement)clock.parentElement.insertBefore(b,clock);else bar.appendChild(b);
+  const clock=bar.querySelector('.tclock');if(clock)bar.insertBefore(b,clock);else bar.appendChild(b);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();
 </script>
-<style id="gz-rose-jaune">
-/* Palette rose et jaune : décoration uniquement, états des minuteurs conservés. */
-:root{--bg:#140e20;--surface:#21152e;--card:#2b1d39;--border:#604366;--ac:#f9a8d4;--acl:#f9a8d4;--neon:#f9a8d4;--gold:#fde047;--gl:#fef08a;--yellow:#fde047;--purple:#f9a8d4;--text:#fff8fc;--muted:#c8b5cc;--sub:#e4d5e8;--gz-rose:#f9a8d4;--gz-jaune:#fde047}
-body{background:radial-gradient(ellipse at top left,rgba(236,72,153,.09),transparent 60%),var(--bg)}
-.topbar,.bnav{background:var(--surface);border-color:#725176}
-.topbar{box-shadow:0 2px 16px rgba(236,72,153,.08)}
-.tlogo,.login-logo,.ctl-num,.pc-num{color:var(--gz-rose)}
-.tbadge{background:#473022;color:var(--gz-jaune);border:1px solid #8c6f31}
-.tclock{color:#fff4d4}
-.card,.login-card,.kpi-box,.st{background:var(--card);border-color:var(--border)}
-.ctl-card,.pc{background:linear-gradient(145deg,#32213f,#261b34);border-color:#765277;box-shadow:0 3px 14px rgba(0,0,0,.12)}
-.ctl-card.active,.pc.p-on{border-color:var(--green)}
-.ctl-card.paused,.pc.p-pause{border-color:var(--gz-jaune)}
-.pc.p-urg{border-color:var(--red)}
-.kpi-box::before,.st-p::before{background:linear-gradient(90deg,#f9a8d4,#fde047)}
-.sh h2,.mt{color:var(--gz-jaune)}
-.sl,.kpi-lbl,.ig label{color:#decce2}
-.ni.active{color:var(--gz-jaune);background:rgba(253,224,71,.06)}
-.ni{color:#c8b5cc}
-.btn-start,.ctl-start,.btn-login{background:var(--gz-rose);border-color:#fbcfe8;color:#301323}
-.btn-pause,.ctl-pause{background:#47391d;border:1px solid #a68d35;color:#fef08a}
-.btn-resume,.ctl-resume{background:#294d3d;border:1px solid #68b98e;color:#dcfce7}
-.btn-plus,.ctl-plus,.btn-edit{background:#42233d;border-color:#a16793;color:#fbcfe8}
-.btn-ok{background:var(--gz-jaune);color:#332a08}
-.ig input,.ig select{background:#1a1225;border-color:#765277;color:var(--text)}
-.ig input:focus,.ig select:focus{border-color:var(--gz-jaune);outline:2px solid rgba(253,224,71,.2);outline-offset:1px}
-button:focus-visible,.ni:focus-visible{outline:2px solid var(--gz-jaune);outline-offset:3px}
-#gz-notify-btn{border-color:#a67d3e!important;background:#3e311d!important;color:#fde047!important}
-
-</style>
 </head>
 <body>
 
@@ -447,7 +416,7 @@ button:focus-visible,.ni:focus-visible{outline:2px solid var(--gz-jaune);outline
     <div class="lerr" id="lerr"></div>
   </div>
   <div style="font-size:11px;color:var(--muted);margin-top:14px;text-align:center">Identifiant cp1 + mot de passe Firebase Gérant</div>
-  <div style="font-size:9px;color:#6b7280;margin-top:5px;text-align:center">GameZone Bah V65 Gym4 — Gérant CP1</div>
+  <div style="font-size:9px;color:#6b7280;margin-top:5px;text-align:center">GameZone Bah V63 — Gérant CP1</div>
   <div style="margin-top:20px;padding:12px 16px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:10px;max-width:340px;width:100%;text-align:center;cursor:pointer" onclick="resetRoomCode()">
     <div style="font-size:12px;font-weight:700;color:#ef4444;margin-bottom:2px">⚠️ Cet appareil sert un autre commerce ?</div>
     <div style="font-size:11px;color:var(--muted);text-decoration:underline">Changer de code de salle</div>
@@ -468,12 +437,11 @@ button:focus-visible,.ni:focus-visible{outline:2px solid var(--gz-jaune);outline
       <span class="tbadge" id="role-badge">Gérant</span>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
-      <button type="button" id="gz-notify-btn" onclick="alert('Chargement des notifications : attends la fin du chargement puis réessaie.')" title="Activer les notifications GameZone" aria-label="Activer les notifications GameZone" style="flex-shrink:0;background:#1e293b;color:white;border:1px solid #64748b;border-radius:8px;padding:7px;min-width:38px;cursor:pointer">🔔</button><div class="tclock" id="clock">00:00</div>
+      <div class="tclock" id="clock">00:00</div>
       <button class="btn-out" onclick="doLogout()">⏏</button>
     </div>
   </div>
 
-  <div id="gz-build-version" style="font-size:11px;padding:5px 12px;color:#86efac;background:#111827">MANUEL16 · Pause / Reprendre · PUSH14</div>
   <div class="scroll" id="scroll">
 
     <!-- PAGE POSTES -->
@@ -554,13 +522,13 @@ button:focus-visible,.ni:focus-visible{outline:2px solid var(--gz-jaune);outline
     <div class="mh"></div>
     <div class="mt" id="ms-title">Démarrer session</div>
     <div class="ig"><label>Nom du client</label><input type="text" id="ms-nom" placeholder="Ex: Koné Moussa" autocomplete="off"></div>
-    <div class="ig"><label>Durée</label><div class="dgrid" id="duree-grid"></div><div style="grid-column:1/-1;margin-top:10px"><label for="gz-custom-start">Minutes exactes à saisir (1 = 1 min, 5 = 5 min)</label><input id="gz-custom-start" type="number" min="1" max="1440" step="1" placeholder="Ex. 1, 5 ou 15" oninput="gzChooseCustom('start',this.value)" style="width:100%;box-sizing:border-box"><div id="gz-price-start" aria-live="polite" style="font-size:12px;margin-top:6px">Prix proportionnel, arrondi aux 10 F les plus proches (minimum 10 F).</div></div></div>
+    <div class="ig"><label>Durée</label><div class="dgrid" id="duree-grid"></div></div>
     <div class="ig"><label>Paiement</label><div class="pgrid2" id="pay-grid"></div></div>
     <div id="prise-info-start" style="display:none;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:10px 14px;font-size:12px;color:var(--green);margin-top:8px">
       🔌 La prise sera allumée automatiquement à l'activation
     </div>
     <div class="ma">
-      <div id="gz-start-status" role="status" aria-live="polite" style="width:100%;color:#fbbf24;white-space:normal"></div><button class="btn-cancel" onclick="closeModal('mo-start')">Fermer</button>
+      <button class="btn-cancel" onclick="closeModal('mo-start')">Annuler</button>
       <button class="btn-ok" onclick="confirmerSession()">Activer ✓</button>
     </div>
   </div>
@@ -571,11 +539,40 @@ button:focus-visible,.ni:focus-visible{outline:2px solid var(--gz-jaune);outline
   <div class="ms">
     <div class="mh"></div>
     <div class="mt" id="mp-title">Prolonger</div>
-    <div class="ig"><label>Durée à ajouter</label><div class="plusgrid" id="plus-grid"></div><div style="grid-column:1/-1;margin-top:10px"><label for="gz-custom-plus">Minutes exactes à saisir (1 = 1 min, 5 = 5 min)</label><input id="gz-custom-plus" type="number" min="1" max="1440" step="1" placeholder="Ex. 1, 5 ou 15" oninput="gzChooseCustom('plus',this.value)" style="width:100%;box-sizing:border-box"><div id="gz-price-plus" aria-live="polite" style="font-size:12px;margin-top:6px">Prix proportionnel, arrondi aux 10 F les plus proches (minimum 10 F).</div></div></div>
+    <div class="ig"><label>Durée à ajouter</label><div class="plusgrid" id="plus-grid"></div></div>
     <div class="ig"><label>Paiement</label><div class="pgrid2" id="pay-grid2"></div></div>
     <div class="ma">
-      <button class="btn-cancel" onclick="closeModal('mo-plus')">Fermer</button>
+      <button class="btn-cancel" onclick="closeModal('mo-plus')">Annuler</button>
       <button class="btn-ok" onclick="confirmerPlus()">Prolonger ✓</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL ANNULATION -->
+<div class="mo" id="mo-stop">
+  <div class="ms">
+    <div class="mh"></div>
+    <div class="csheet">
+      <div class="cicon">↩️</div>
+      <div class="ctxt">Annuler la session de</div>
+      <div class="cname" id="stop-name">—</div>
+      <div class="cdet" id="stop-det">—</div>
+      <div id="stop-amount" style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--green);margin:-8px 0 12px">—</div>
+      <div id="stop-prise-info" style="display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:10px;font-size:12px;color:var(--red);margin-bottom:14px;text-align:center">
+        🔌 Après validation, la prise sera éteinte automatiquement
+      </div>
+      <div style="font-size:11px;color:var(--sub);line-height:1.55;margin-top:8px;padding:9px 10px;border-radius:9px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.16)">
+        L'annulation retire automatiquement le montant de <b>ce poste seulement</b> de la recette du jour. Exemple : 2 400 F − 100 F = <b>2 300 F</b>.
+      </div>
+      <div class="ig" style="text-align:left;margin-top:13px;margin-bottom:0">
+        <label>Motif de l'annulation — obligatoire</label>
+        <input type="text" id="cancel-reason" placeholder="Ex: TV en panne, changement de poste..." autocomplete="off" oninput="updateCancelButtonState()">
+        <div id="cancel-help" style="font-size:10px;color:var(--yellow);margin-top:5px">⚠️ Tant que le motif est vide, l'annulation est impossible.</div>
+      </div>
+      <div class="ma" style="flex-wrap:wrap">
+        <button class="btn-cancel" style="flex:1" onclick="closeModal('mo-stop')">Retour</button>
+        <button id="btn-cancel-sale" class="btn-ok" disabled style="flex:2;background:#7f1d1d;opacity:.35;cursor:not-allowed" onclick="confirmerAnnulation()">Annuler le poste + retirer le montant</button>
+      </div>
     </div>
   </div>
 </div>
@@ -820,7 +817,7 @@ function createRestRoot(tenantKey){
       if(live.paused)sec=Math.max(0,Number(live.pauseRemainingSec)||0);
       else sec=Math.max(0,Math.ceil(((Number(live.finTs)||0)-Date.now())/1000));
       if(!sec)throw new Error('Séance déjà terminée');
-      const after=Object.assign({},live,{pausePowerOffConfirmed:false,paused:true,pauseRemainingSec:sec,finTs:0,updatedAt:Date.now()});
+      const after=Object.assign({},live,{paused:true,pauseRemainingSec:sec,finTs:0,updatedAt:Date.now()});
       // If-Match rejette toute tentative d'écraser une nouvelle séance ou prolongation.
       await restFetchJson(url,{method:'PUT',headers:{'Content-Type':'application/json','if-match':etag},body:JSON.stringify(after)});
       if(fbForcePoll)setTimeout(fbForcePoll,40);
@@ -829,17 +826,13 @@ function createRestRoot(tenantKey){
     on:function(event,success,error){
       if(event!=='value') return;
 
-      let fullReadAt=0;
       const poll=async function(){
         if(fbPollBusy) return;
         fbPollBusy=true;
         try{
           // Cache-buster important sur certains Chrome/Safari/WebView mobiles.
           const sep=restUrl(rootPath).indexOf('?')>=0?'&':'?';
-          const full=!DB._ready||Date.now()-fullReadAt>12000;
-          let got;
-          if(full){fullReadAt=Date.now();try{got=await restFetchJson(restUrl(rootPath)+sep+'_gzts='+Date.now());}catch(e){if(!DB._ready)throw e;const active=await restFetchJson(restUrl(rootPath+'/active_by_poste')+'?_gzts='+Date.now());got={data:{...DB._cache,active_by_poste:active.data||{}}};}}
-          else{const active=await restFetchJson(restUrl(rootPath+'/active_by_poste')+'?_gzts='+Date.now());got={data:{...DB._cache,active_by_poste:active.data||{}}};}
+          const got=await restFetchJson(restUrl(rootPath)+sep+'_gzts='+Date.now());
           fbLastSyncAt=Date.now();
           if(typeof success==='function') success(makeSnapshot(got.data||{}));
         }catch(e){
@@ -1059,7 +1052,7 @@ function gzCloudTimerSync(poste, attempt=0){
       if(!token)throw Error('Jeton Firebase absent');
       const payload={tenantKey:currentTenantKey,action:poste==null?'syncAllTimers':'syncTimer'};
       if(poste!=null)payload.poste=String(poste);
-      const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),9000);
+      const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),25000);
       let resp;
       try {resp=await fetch(TUYA_WORKER_URL,{method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
@@ -1068,6 +1061,7 @@ function gzCloudTimerSync(poste, attempt=0){
       if(!resp.ok)throw Error('Worker alarm HTTP '+resp.status);
       const result=await resp.json().catch(()=>null);
       if(!result || result.success!==true || result.scheduler!=='durable-object' || !Number.isFinite(Number(result.scheduledAt)) )throw Error('Alarme serveur absente — déployer Worker v63');
+      if(result.relayConfirmed)showToast('✓ Minuteur local synchronisé avec le téléphone relais');
     }catch(e){
       console.warn('Minuterie serveur non synchronisée:',poste,e&&e.message);
       if(attempt<4)gzCloudTimerSync(poste,attempt+1);
@@ -1212,7 +1206,7 @@ function gzSharedPlugOccupant(root, poste, idx){
     const other=all[j];
     if(!other||j===idx||String(other.num||'')===String(poste.num||'')||String(other.devid||'').trim()!==id)continue;
     const st=rootReadActive(root,other,j)||{};
-    if(Number(st.pausePendingUntil)>Date.now()||st.actif||(st.starting&&Date.now()<Number(st.startingUntil||0))||(st.cleanup&&Date.now()<Number(st.cleanupUntil||0)))return other;
+    if(st.actif||(st.starting&&Date.now()<Number(st.startingUntil||0))||(st.cleanup&&Date.now()<Number(st.cleanupUntil||0)))return other;
   }
   return null;
 }
@@ -1382,10 +1376,7 @@ function clearPosteState(p){
   p.sessionId=''; p.startedAt=0; p.bonus=false; p.bonusOnly=false; p.bonusSource=''; p.bonusDurationMin=0; p.bonusMinutesAdded=0; p.bonusGrantedAt=0; p._alerted5=false; p._ending=false; p._offAttempted=false;
 }
 function isClosedSession(p){
-  const closure=p&&p.sessionId&&closedSessions[p.sessionId];
-  if(!closure)return false;
-  if(p.actif&&Number(p.updatedAt||p.startedAt)>Number(closure.ts||0))return false;
-  return true;
+  return !!(p && p.sessionId && closedSessions[p.sessionId]);
 }
 
 let currentUser='';
@@ -1521,7 +1512,7 @@ async function tuyaCommand(poste, turnOn){
     return false;
   }
   const controller=(typeof AbortController!=='undefined')?new AbortController():null;
-  const timer=controller?setTimeout(function(){try{controller.abort();}catch(e){}},7000):null;
+  const timer=controller?setTimeout(function(){try{controller.abort();}catch(e){}},25000):null;
   try{
     const idToken=await ensureFirebaseToken();
     if(!idToken){
@@ -1762,7 +1753,7 @@ function announceFiveMinutesOnce(p){
   if(!p||!p.sessionId)return;
   const key=voiceFiveKey(p.sessionId,p.bonusGrantedAt||0);
   try{if(gzStorageGet(key)==='1')return;}catch(e){}
-  const ok=gzSpeak(GameZoneManagement.displayName(p)+', il reste '+Math.max(1,Math.ceil(remainingSec(p)/60))+' minutes avant l’extinction de la télévision.');
+  const ok=gzSpeak(speechPosteName(p.num)+', il reste cinq minutes avant l’extinction de la télévision.');
   if(ok){try{gzStorageSet(key,'1');}catch(e){}}
 }
 
@@ -1921,7 +1912,6 @@ function initApp(){
       tempsTotal:Number(r.tempsTotal)||0,
       dureeMin:Number(r.dureeMin)||0,
       paused:!!r.paused,
-      pausePowerOffConfirmed:r.pausePowerOffConfirmed===true,
       pauseRemainingSec:Number(r.pauseRemainingSec)||0,
       montantSession:money(r.montantSession),
       montantJourSession:money(r.montantJourSession!=null?r.montantJourSession:r.montantSession),
@@ -2037,7 +2027,7 @@ function renderPostes(){
     const tcls=!p.actif?'t-free':p.paused?'t-mid':urg?'t-low':mid?'t-mid':'t-ok';
     const bcls=urg?'b-low':mid?'b-mid':'b-ok';
     const ccls=!p.actif?'':p.paused?'p-on p-paused':urg?'p-on p-urg':'p-on';
-    const btxt=!p.actif?'Libre':expired?'FIN EN COURS':p.paused?'EN PAUSE':'EN FONCTION';
+    const btxt=!p.actif?'Libre':expired?'FIN EN COURS':p.paused?'Pause':urg?'Urgent':'En jeu';
     const bcl=!p.actif?'pb-off':expired?'pb-urg':p.paused?'pb-urg':urg?'pb-urg':'pb-on';
     const hasPrise=!!(p.devid);
     const priseInd=p.actif&&!p.paused&&hasPrise?'pi-on':hasPrise?'pi-off':'pi-none';
@@ -2047,7 +2037,7 @@ function renderPostes(){
     div.className=`pc ${ccls}`;
     div.innerHTML=`
       <div class="prise-ind ${priseInd}"></div>
-      <div class="pc-top"><div class="pc-num">${escapeHtml(GameZoneManagement.displayName(p))}</div><span class="pb ${bcl}">${btxt}</span></div>
+      <div class="pc-top"><div class="pc-num">${speechPosteName(p.num)}</div><span class="pb ${bcl}">${btxt}</span></div>
       <div class="pc-type">${escapeHtml(gzGerantTypeLabel(p))}</div>
       <div class="pc-timer-row">
         <div class="pc-timer ${tcls}">${p.actif?ts:'—:——'}</div>
@@ -2060,10 +2050,10 @@ function renderPostes(){
       <div class="pc-acts">
         ${expired?'<span class="pc-btn" style="grid-column:1/-1;text-align:center">⏳ Temps terminé — libération automatique</span>':p.actif
           ?`${p.paused
-              ?`<button class="pc-btn btn-resume" onclick="reprendrePoste(${i})">▶ Reprendre</button><button class="pc-btn btn-pause" onclick="gzRetryPausedPower(${i})">${p.pausePowerOffConfirmed?'OFF CONFIRMÉ':'RÉESSAYER OFF'}</button>`
+              ?`<button class="pc-btn btn-resume" onclick="reprendrePoste(${i})">▶ Reprendre</button>`
               :`<button class="pc-btn btn-pause" onclick="pausePoste(${i})">⏸ Pause</button>`}
-            <button class="pc-btn btn-plus" onclick="openPlus(${i})">+Tps</button><button class="pc-btn btn-stop" onclick="gerantFinishTime(${i})">Arrêter le temps</button>
-            `
+            <button class="pc-btn btn-plus" onclick="openPlus(${i})">+Tps</button>
+            <button class="pc-btn btn-stop" onclick="openStop(${i})">Annuler</button>`
           :`<button class="pc-btn btn-start" onclick="openStart(${i})">Démarrer</button>`
         }
       </div>`;
@@ -2083,7 +2073,7 @@ function renderPostes(){
   const bonusRest=bonusActifs.length?Math.min(...bonusActifs.map(gzOfferedRemainingSeconds)):0;
   const bonusTone=bonusActifs.length?gzProgressTone(bonusRest,bonusActifs.every(x=>x.paused)):'';
   const bonusBar='<div class="gz-yellow-meta">⏱ BONUS GRATUIT RESTANT — '+(bonusActifs.length?fmtDurationSec(bonusLeft):'Aucun bonus actif')+'</div><div class="gz-yellow-progress"><div class="gz-yellow-fill '+bonusTone+'" style="width:'+bonusPct.toFixed(2)+'%"></div></div>';
-  bonus.innerHTML='<div class="bonus-title">🎁 CASE 7 — BONUS CLIENT FIDÈLE</div><div class="bonus-note">Bonus automatique postes TV 1 à 6 : 1 000 F → 15 min, 2 000 F → 20 min, 3 000 F → 25 min, puis +5 min par 1 000 F. Bonus manuel Patron conservé.</div><span class="bonus-readonly">👁 Affichage seulement · Gérant</span>'+bonusBar+live+gzOccupancyHtml(postes);
+  bonus.innerHTML='<div class="bonus-title">🎁 CASE 7 — BONUS CLIENT FIDÈLE</div><div class="bonus-note">Bonus automatique postes TV 1 à 6 : 1 000 F → 15 min, 2 000 F → 20 min, 3 000 F → 25 min, puis +5 min par 1 000 F. Bonus manuel Patron conservé.</div><span class="bonus-readonly">👁 Affichage seulement · Gérant</span>'+bonusBar+live;
   grid.appendChild(bonus);
 
   document.getElementById('s-libre').textContent=`${libres} libre${libres>1?'s':''}`;
@@ -2288,7 +2278,7 @@ function tarifsForPoste(p){
 function buildDureeGrid(){
   const p=postes[modalPosteIdx];
   const tarifs=tarifsForPoste(p).sort((a,b)=>a.min-b.min);
-  const grid=document.getElementById('duree-grid');gzCustomReset('start');
+  const grid=document.getElementById('duree-grid');
   if(!tarifs.length){grid.innerHTML=`<div style="font-size:12px;color:var(--muted);grid-column:span 3">Aucun tarif configuré pour ${escapeHtml(gzGerantTypeLabel(p))}.</div>`;return;}
   grid.innerHTML=tarifs.map((t,i)=>`
     <div class="dopt ${i===0?'sel':''}" onclick="selDureeOpt(this,${t.min})">
@@ -2300,13 +2290,13 @@ function buildDureeGrid(){
 
 function selDureeOpt(el,min){
   document.querySelectorAll('#duree-grid .dopt').forEach(e=>e.classList.remove('sel'));
-  el.classList.add('sel'); selDuree=min;gzChoosePreset('start',tarifsForPoste(postes[modalPosteIdx]),min);
+  el.classList.add('sel'); selDuree=min;
 }
 
 function buildPlusGrid(){
   const p=postes[modalPosteIdx];
   const tarifs=tarifsForPoste(p).sort((a,b)=>a.min-b.min);
-  const grid=document.getElementById('plus-grid');gzCustomReset('plus');
+  const grid=document.getElementById('plus-grid');
   if(!tarifs.length){grid.innerHTML=`<div style="font-size:12px;color:var(--muted)">Aucun tarif pour ${escapeHtml(gzGerantTypeLabel(p))}.</div>`;return;}
   grid.innerHTML=tarifs.map((t,i)=>`
     <div class="plusopt ${i===0?'sel':''}" onclick="selPlusDureeOpt(this,${t.min})">
@@ -2318,7 +2308,7 @@ function buildPlusGrid(){
 
 function selPlusDureeOpt(el,min){
   document.querySelectorAll('#plus-grid .plusopt').forEach(e=>e.classList.remove('sel'));
-  el.classList.add('sel'); selPlusDuree=min;gzChoosePreset('plus',tarifsForPoste(postes[modalPosteIdx]),min);
+  el.classList.add('sel'); selPlusDuree=min;
 }
 
 function buildPayGrid(cid,varName){
@@ -2342,12 +2332,11 @@ function selPayOpt(el,id,cid,varName){
 // MODAL START
 // ══════════════════════════════════════
 function openStart(i){
-  const message=document.getElementById('gz-start-status');if(message)message.textContent='';
   modalPosteIdx=i;
   const p=postes[i];
   const other=gzSharedPlugOccupant(DB._cache||{},p,i);
   if(other){showToast('🔌 Prise utilisée par '+other.num+' : terminez cette session avant de lancer '+p.num);return;}
-  document.getElementById('ms-title').textContent=`${GameZoneManagement.displayName(p)} — Nouvelle session`;
+  document.getElementById('ms-title').textContent=`${p.num} — Nouvelle session`;
   document.getElementById('ms-nom').value='';
   const hasPrise=!!(p.devid);
   document.getElementById('prise-info-start').style.display=hasPrise?'block':'none';
@@ -2358,26 +2347,22 @@ function openStart(i){
 }
 
 async function confirmerSession(){
-  const startStatus=msg=>{const el=document.getElementById('gz-start-status');if(el)el.textContent=msg;return showToast(msg);};
   const lockKey='start-'+modalPosteIdx;
   if(actionLocks.has(lockKey))return;
   actionLocks.add(lockKey);
   let idx=-1,p=null,sid='',reserved=false,powered=false;
   try{
-    if(!fbRoot)throw new Error('Connexion Firebase indisponible');
-    const latest=await fbRoot.once('value');
-    syncFromTransactionResult({snapshot:latest});
     const nom=document.getElementById('ms-nom').value.trim();
-    if(!nom)return startStatus('⚠️ Entrez le nom du client');
-    if(!selDuree)return startStatus('⚠️ Choisissez une durée');
+    if(!nom)return showToast('⚠️ Entrez le nom du client');
+    if(!selDuree)return showToast('⚠️ Choisissez une durée');
     idx=modalPosteIdx;p=postes[idx];
-    if(!p||p.actif)return startStatus('⚠️ Poste déjà occupé');
-    const tarif=gzSelectedTariff('start',tarifsForPoste(p),selDuree);
-    if(!tarif)return startStatus('⚠️ Tarif introuvable');
-    const prix=money(tarif.prix),duree=minutesNum(tarif.min),payKey=selPay;
-    if(prix<=0||duree<=0)return startStatus('⚠️ Tarif invalide');
-    if(!fbRoot)return startStatus('⚠️ Connexion Firebase indisponible');
-    if(!resolvedDeviceId(p))return startStatus('⚠️ '+p.num+' : prise Tuya non configurée. Aucun temps ni recette démarrés.');
+    if(!p||p.actif)return showToast('⚠️ Poste déjà occupé');
+    const tarif=tarifsForPoste(p).find(x=>Number(x.min)===Number(selDuree));
+    if(!tarif)return showToast('⚠️ Tarif introuvable');
+    const prix=money(tarif.prix),duree=minutesNum(selDuree),payKey=selPay;
+    if(prix<=0||duree<=0)return showToast('⚠️ Tarif invalide');
+    if(!fbRoot)return showToast('⚠️ Connexion Firebase indisponible');
+    if(!resolvedDeviceId(p))return showToast('⚠️ '+p.num+' : prise Tuya non configurée. Aucun temps ni recette démarrés.');
     sid=String(p.num)+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
     let autoBonusStartG=0;
     const payLbl=((PAYS.find(x=>x.id===payKey)||{}).lbl)||payKey;
@@ -2385,12 +2370,12 @@ async function confirmerSession(){
     const reserve=await fbRoot.transaction(root=>{
       root=root||{};const r=rootReadActive(root,p,idx)||{};
       if(gzSharedPlugOccupant(root,p,idx))return undefined;
-      if(Number(r.pausePendingUntil)>Date.now()||r.actif||(r.starting&&Date.now()<Number(r.startingUntil||0))||(r.cleanup&&Date.now()<Number(r.cleanupUntil||0)))return undefined;
+      if(r.actif||(r.starting&&Date.now()<Number(r.startingUntil||0))||(r.cleanup&&Date.now()<Number(r.cleanupUntil||0)))return undefined;
       rootWriteActive(root,p,idx,{actif:false,starting:true,startingUntil:Date.now()+45000,
         client:nom,sessionId:sid,finTs:0,paused:false,montantSession:0,updatedAt:Date.now()});
       return root;
     });
-    if(!reserve||!reserve.committed){syncFromTransactionResult(reserve);closeModal('mo-start');return startStatus('⚠️ Séance déjà présente sur Firebase : état actualisé. Reprendre ou terminer la séance existante.');}
+    if(!reserve||!reserve.committed)return showToast('⚠️ Poste occupé ou prise Tuya partagée déjà utilisée par une autre console.');
     reserved=true;
     showToast('⏳ Vérification allumage '+p.num+' ...');
     // ÉTAPE 2 : la prise doit être réellement ON, sinon on ne démarre pas le compteur.
@@ -2427,7 +2412,7 @@ async function confirmerSession(){
     if(fbForcePoll)setTimeout(fbForcePoll,120);
   }catch(e){
     console.warn('Activation TV interrompue:',e);
-    startStatus('⚠️ '+(e&&e.message||'Activation impossible'));
+    showToast('⚠️ '+(e&&e.message||'Activation impossible'));
     if(reserved&&fbRoot){
       try{await fbRoot.transaction(root=>{root=root||{};const r=rootReadActive(root,p,idx)||{};
         if(!r.starting||r.sessionId!==sid)return undefined;
@@ -2448,7 +2433,7 @@ async function confirmerSession(){
 function openPlus(i){
   modalPosteIdx=i;
   const p=postes[i];
-  document.getElementById('mp-title').textContent=`${GameZoneManagement.displayName(p)} — Prolonger`;
+  document.getElementById('mp-title').textContent=`${p.num} — Prolonger`;
   buildPlusGrid();
   buildPayGrid('pay-grid2','selPlusPlay');
   openModal('mo-plus');
@@ -2463,9 +2448,9 @@ async function confirmerPlus(){
   actionLocks.add(lockKey);
   try{
     if(!fbRoot){showToast('⚠️ Connexion Firebase indisponible');return;}
-    const tarif=gzSelectedTariff('plus',tarifsForPoste(p),selPlusDuree);
+    const tarif=tarifsForPoste(p).find(t=>Number(t.min)===Number(selPlusDuree));
     if(!tarif){showToast('⚠️ Tarif introuvable pour '+p.type);return;}
-    const prix=money(tarif.prix),duree=minutesNum(tarif.min),payKey=selPlusPlay;
+    const prix=money(tarif.prix),duree=minutesNum(selPlusDuree),payKey=selPlusPlay;
     if(prix<=0||duree<=0){showToast('⚠️ Tarif ou durée invalide');return;}
     // Relire la séance OFFICIELLE sur Firebase avant chaque prolongation.
     // Une synchronisation récente du Patron ne doit pas faire refuser +Temps.
@@ -2534,15 +2519,13 @@ async function confirmerPlus(){
 // MODAL STOP
 // ══════════════════════════════════════
 function openStop(i){
-  return showToast('🔒 Annulation réservée au Patron');
-
   stopIdx=i;
   const p=postes[i];
   const rest=remainingSec(p);
   const mm=Math.floor(rest/60);
   const montant=Math.max(0,Number(p.montantSession)||Object.values(p.paiementsSession||{}).reduce((a,v)=>a+(Number(v)||0),0));
   document.getElementById('stop-name').textContent=p.client;
-  document.getElementById('stop-det').textContent=`${GameZoneManagement.displayName(p)} · ${mm} min ${String(rest%60).padStart(2,'0')} s restantes`;
+  document.getElementById('stop-det').textContent=`${p.num} · ${mm} min ${String(rest%60).padStart(2,'0')} s restantes`;
   document.getElementById('stop-amount').textContent=`Montant à retirer si annulé : ${montant.toLocaleString('fr-FR')} F`;
   document.getElementById('cancel-reason').value='';
   const cancelBtn=document.getElementById('btn-cancel-sale');
@@ -2553,9 +2536,7 @@ function openStop(i){
   openModal('mo-stop');
 }
 
-function gerantFinishTime(i){const p=postes[i];if(!p||!p.actif)return; if(!confirm('Arrêter le temps de '+GameZoneManagement.displayName(p)+' ? La recette reste conservée.'))return;stopIdx=i;return confirmerStop();}
 async function confirmerStop(){
-
   const idx=stopIdx;
   const p=postes[idx];
   if(!p || !p.actif) return;
@@ -2586,13 +2567,13 @@ async function confirmerStop(){
     if(!tx || !tx.committed){
       if(fbForcePoll) await fbForcePoll();
       showToast('ℹ️ Cette session a déjà été modifiée sur un autre téléphone');
-      if(document.getElementById('mo-stop'))closeModal('mo-stop');
+      closeModal('mo-stop');
       return;
     }
     syncFromTransactionResult(tx);
     { const restSec=Math.max(0,remainingSec(deviceSnapshot)); const totalSec=Math.max(0,Number(deviceSnapshot.tempsTotal)||0); const usedSec=Math.max(0,totalSec-restSec); addJournal('r',`${deviceSnapshot.num} — Session terminée`,`${deviceSnapshot.client} · Début ${deviceSnapshot.startedAt?fmtClock(deviceSnapshot.startedAt,true):'—'} · Fin ${fmtClock(now,true)} · Temps activé ${fmtDurationSec(totalSec)} · Temps utilisé ${fmtDurationSec(usedSec)} · Restant ${fmtDurationSec(restSec)}`,`${money(deviceSnapshot.montantSession).toLocaleString('fr-FR')} F`,'',{poste:deviceSnapshot.num,client:deviceSnapshot.client,sessionId:sid,typeActivite:'terminee',debutTs:deviceSnapshot.startedAt||0,finTs:now,dureeSec:totalSec,tempsUtiliseSec:usedSec,tempsRestantSec:restSec,montant:money(deviceSnapshot.montantSession)}); }
     gzSpeak(speechPosteName(deviceSnapshot.num)+', temps terminé.');
-    if(document.getElementById('mo-stop'))closeModal('mo-stop');
+    closeModal('mo-stop');
     renderPostes(); updateStats();
     if(deviceSnapshot.devid) await eteindrePrise(deviceSnapshot,'manuel');
     else showToast(`${deviceSnapshot.num} libéré`);
@@ -2607,8 +2588,6 @@ async function confirmerStop(){
 
 
 async function confirmerAnnulation(){
-  return showToast('🔒 Annulation réservée au Patron');
-
   const p=postes[stopIdx];
   if(!p || !p.actif) return;
 
@@ -2705,7 +2684,7 @@ async function confirmerAnnulation(){
     clearPosteState(p);
     localRevenueMutationUntil=Date.now()+6000;
     localStateMutationUntil=Date.now()+6000;
-    if(document.getElementById('mo-stop'))closeModal('mo-stop');
+    closeModal('mo-stop');
     renderPostes();
     updateStats();
     const activePage=document.querySelector('.page.active');
@@ -2838,7 +2817,39 @@ async function confirmerAnnulation(){
   }
 }
 
-async function pausePoste(i,auto=false){if(auto)return false;return gzPauseViaServer(i);}
+async function pausePoste(i,auto=false){
+  const p=postes[i];
+  if(!p||!p.actif||p.paused)return;
+  const lockKey='pause-poste-'+String(p.num);
+  if(actionLocks.has(lockKey))return;
+  actionLocks.add(lockKey);
+  const sid=p.sessionId||'';
+  const before=Object.assign({},p);
+  const rest=Math.max(0,remainingSec(p));
+  // Feedback immédiat : le serveur confirmera avant la commande OFF.
+  p.pauseRemainingSec=rest;p.paused=true;p.finTs=0;
+  renderPostes();updateStats();
+  try{
+    if(!fbRoot || !fbRoot.pausePosteAtomic)throw new Error('Firebase indisponible');
+    const saved=await fbRoot.pausePosteAtomic(before,sid);
+    p.pauseRemainingSec=Math.max(0,Number(saved.pauseRemainingSec)||0);
+    p.paused=true;p.finTs=0;
+    renderPostes();updateStats();
+    if(!auto)gzSpeak(speechPosteName(before.num)+', temps mis en pause.');
+    addJournal('y',`${before.num} — Pause`,`${before.client} · ${Math.floor(p.pauseRemainingSec/60)} min restantes${auto?' · protection coupure':''}`,'');
+    showToast(auto?`⚡ ${before.num} : temps protégé`:`⏸ ${before.num} : pause confirmée — extinction en cours`);
+    if(!auto&&resolvedDeviceId(before)){
+      const ok=await eteindrePrise(before,'pause');
+      if(!ok)showToast('⚠️ '+before.num+' : temps en pause, mais OFF non confirmé. Vérifiez Smart Life.');
+    }
+  }catch(e){
+    console.warn('Pause non enregistrée',e);
+    // Ne jamais conserver une fausse pause locale si Firebase l'a refusée.
+    Object.assign(p,before);renderPostes();updateStats();
+    showToast('⚠️ Pause non enregistrée : '+String(e&&e.message||'erreur réseau').slice(0,100));
+    if(fbForcePoll)try{await fbForcePoll();}catch(_){}
+  }finally{actionLocks.delete(lockKey);}
+}
 
 async function reprendrePoste(i){
   const p=postes[i];if(!p||!p.actif||!p.paused||!fbRoot)return;
@@ -3108,7 +3119,6 @@ function refreshFromRemote(){
       tempsTotal:Number(r.tempsTotal)||0,
       dureeMin:Number(r.dureeMin)||0,
       paused:!!r.paused,
-      pausePowerOffConfirmed:r.pausePowerOffConfirmed===true,
       pauseRemainingSec:Number(r.pauseRemainingSec)||0,
       montantSession:money(r.montantSession),
       montantJourSession:money(r.montantJourSession!=null?r.montantJourSession:r.montantSession),
@@ -3271,7 +3281,7 @@ function renderRapport(){
         const m=(rev.perPoste.month[p.num]||0).toLocaleString('fr-FR');
         const t=(rev.perPoste.total[p.num]||0).toLocaleString('fr-FR');
         return `<div class="rrow" style="flex-direction:column;align-items:stretch;gap:4px">
-          <span class="rk" style="font-weight:600">${escapeHtml(GameZoneManagement.displayName(p))} — ${escapeHtml(p.type)}</span>
+          <span class="rk" style="font-weight:600">${p.num} — ${p.type}</span>
           <span style="font-size:11px;color:var(--muted)">Jour : ${d} F · Semaine : ${w} F · Mois : ${m} F · Total : ${t} F</span>
         </div>`;
       }).join('')
@@ -3391,11 +3401,10 @@ async function gzFinishExpiredG(i,p){
   const snapshot={...p};
   p._ending=true;
   try{
-    if(!(await gzConfirmFinish16(snapshot,p)))return;
     const result=await fbRoot.transaction(root=>{
       root=root||{};
       const live=rootReadActive(root,snapshot,i)||{};
-      if(!live.actif||(sid&&live.sessionId!==sid)||!live.poweredOffAt||live.powerCutSessionId!==sid)return undefined;
+      if(!live.actif||(sid&&live.sessionId!==sid))return undefined;
       const now=Date.now();
       if(live.paused){if(Number(live.pauseRemainingSec||0)>0)return undefined;}
       else if(!Number(live.finTs)||Number(live.finTs)>now)return undefined;
@@ -3478,9 +3487,9 @@ setInterval(async ()=>{
 
       if(rest<=300 && rest>0 && !p._alerted5){
         p._alerted5=true;
-        addJournal('y',`⚠️ ${p.num} — ${Math.ceil(rest/60)} min restantes`,p.client,'');
+        addJournal('y',`⚠️ ${p.num} — 5 min restantes`,p.client,'');
         announceFiveMinutesOnce(p);
-        showToast(`⚠️ ${p.num} — ${Math.ceil(rest/60)} min restantes !`);
+        showToast(`⚠️ ${p.num} — 5 min restantes !`);
       }
 
       // FIN EXACTE : remainingSec utilise Math.ceil, donc rest ne devient 0
@@ -3682,7 +3691,7 @@ window.GymProofFree=(function(){
     if(!token)throw new Error('Connexion Firebase requise');
     const payload={kind:'image/jpeg',dataUrl,createdAt:Date.now(),name:String(file.name||'photo.jpg').slice(0,100)};
     const resp=await fetch(photoPath(room,sid,base)+'?auth='+encodeURIComponent(token),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    if(!resp.ok)throw new Error('Photo non enregistrée (HTTP '+resp.status+'). '+(resp.status===401||resp.status===403?'Publie les règles Firebase GYM6, puis reconnecte-toi.':'Vérifie Internet puis réessaie.'));
+    if(!resp.ok)throw new Error('Sauvegarde photo refusée ('+resp.status+'). Vérifie les nouvelles règles Firebase V36.');
     return {url:'',path:'gym_proofs/'+room+'/'+sid,kind:'photo-db',type:'image/jpeg',name:payload.name,size:dataUrl.length};
   }
   function videoProof(url){return {url:driveLink(url),path:'',kind:'video-drive',type:'video/drive',name:'Vidéo Google Drive'};}
@@ -3752,7 +3761,7 @@ window.GymProofFree=(function(){
   // V41 : aucune annonce avant la validation Firebase.
   // L'activation, la pause, l'ajout, l'annulation et la fin parlent après succès.
   window.gzSpeakNow=function(message){return gzSpeak(message);};
-  window.announceFiveMinutesOnce=function(p){if(!p||!p.sessionId)return;const k=voiceFiveKey(p.sessionId,p.bonusGrantedAt||0);try{if(gzStorageGet(k)==='1')return;}catch(_e){}if(gzSpeak(GameZoneManagement.displayName(p)+', il reste '+Math.max(1,Math.ceil(remainingSec(p)/60))+' minutes avant l’extinction de la télévision.'))try{gzStorageSet(k,'1');}catch(_e){}};
+  window.announceFiveMinutesOnce=function(p){if(!p||!p.sessionId)return;const k=voiceFiveKey(p.sessionId,p.bonusGrantedAt||0);try{if(gzStorageGet(k)==='1')return;}catch(_e){}if(gzSpeak(speechPosteName(p.num)+', il reste cinq minutes avant l’extinction de la télévision.'))try{gzStorageSet(k,'1');}catch(_e){}};
   ['visibilitychange','pageshow','focus'].forEach(ev=>window.addEventListener(ev,()=>{try{if('speechSynthesis'in window)window.speechSynthesis.resume();}catch(_e){}}));
 
   function ensureStatusBanner(){
@@ -3786,7 +3795,7 @@ window.GymProofFree=(function(){
     try{
       const tx=await fbRoot.transaction(root=>{
         root=root||{};const r=rootReadActive(root,p,i)||{};
-        if(Number(r.pausePendingUntil)>Date.now()||r.actif||(r.starting&&Date.now()<Number(r.startingUntil||0))||
+        if(r.actif||(r.starting&&Date.now()<Number(r.startingUntil||0))||
           (r.cleanup&&Date.now()<Number(r.cleanupUntil||0)))return undefined;
         rootWriteActive(root,p,i,Object.assign({},r,{cleanup:true,cleanupUntil:Date.now()+15000,
           cleanupTag:tag,updatedAt:Date.now()}));return root;
@@ -3805,8 +3814,7 @@ window.GymProofFree=(function(){
 
   // Pause distante validée avant modification locale : ne jamais figer le compte à rebours
   // si une reprise / nouvelle séance a été envoyée entre deux contrôles Tuya.
-  async function gzPauseConfirmedG(i,reason,frozenRest){
-    return false; // SYNC8 manual pause only.
+  async function gzPauseConfirmedG(i){
     const p=postes[i];if(!p||!p.actif||p.paused||!fbRoot)return false;
     const before=Object.assign({},p);const sid=before.sessionId||'';
     try{
@@ -3815,10 +3823,10 @@ window.GymProofFree=(function(){
         const r=rootReadActive(root,before,i)||{};
         if(!r.actif||r.paused||(sid&&r.sessionId!==sid)||
            Number(r.updatedAt||0)!==Number(before.updatedAt||0))return undefined;
-        if(remainingSec(r)<=0)return undefined;
-        const rest=Number.isFinite(frozenRest)&&frozenRest>0?frozenRest:remainingSec(r);
+        const rest=remainingSec(r);
+        if(rest<=0)return undefined;
         rootWriteActive(root,before,i,Object.assign({},r,{
-          paused:true,pauseRemainingSec:rest,finTs:0,pauseReason:reason||'prise éteinte confirmée',updatedAt:Date.now()
+          paused:true,pauseRemainingSec:rest,finTs:0,pauseReason:'prise ON puis OFF confirmée',updatedAt:Date.now()
         }));
         return root;
       });
@@ -3857,11 +3865,11 @@ window.GymProofFree=(function(){
       const offlineIds=new Set(offline.map(d=>d.devid));
       const affected=postes.filter(p=>p&&offlineIds.has(resolvedDeviceId(p)));
       if(affected.length>=2){
-        setStatusBanner('☁️ Plusieurs prises Tuya hors ligne : Internet/Wi-Fi ou courant à vérifier. État électrique inconnu : vérifier les TV. Pause manuelle si coupure réelle.','warn');
+        setStatusBanner('☁️ Plusieurs prises Tuya hors ligne : Internet/Wi-Fi ou courant à vérifier. Minuteurs conservés, coupure générale NON confirmée.','warn');
       }else if(affected.length===1){
-        setStatusBanner('☁️ '+speechPosteName(affected[0].num)+' hors ligne : vérifier Wi-Fi/électricité. État électrique inconnu : vérifier la TV.','warn');
+        setStatusBanner('☁️ '+speechPosteName(affected[0].num)+' hors ligne : vérifier Wi-Fi/électricité. Minuteur conservé, pause manuelle possible.','warn');
       }else if(offline.length){
-        setStatusBanner('☁️ Prise Tuya hors ligne : vérifier réseau/courant, pause après confirmation.','warn');
+        setStatusBanner('☁️ Prise Tuya hors ligne : vérifier réseau/courant, temps inchangés.','warn');
       }else setStatusBanner('', 'info');
       // Une alerte Cloud ou des prises offline ne sont jamais une preuve certaine de panne secteur.
       // Le bouton manuel « coupure » reste le seul moyen de mettre tous les postes en pause.
@@ -3869,12 +3877,11 @@ window.GymProofFree=(function(){
         const p=postes[i];if(!p)continue;
         const devid=resolvedDeviceId(p);if(!devid)continue;
         const st=by[devid];if(!st)continue;
-        const rec=gzOffHistoryG[p.num]||(gzOffHistoryG[p.num]={});
-        if(!p.actif){delete gzOffHistoryG[p.num];if(st.online===true && st.switchOn===true)setStatusBanner('⚠️ '+p.num+' : prise ON sans séance. Vérifier manuellement dans Smart Life.','warn');continue;}
-        const decision=GameZoneCustom.observePower(rec,st,p,Date.now());
-        if(decision){
+        const rec=gzOffHistoryG[devid]||(gzOffHistoryG[devid]={});
+        if(!p.actif){delete gzOffHistoryG[devid];if(st.online===true && st.switchOn===true)setStatusBanner('⚠️ '+p.num+' : prise ON sans séance. Vérifier manuellement dans Smart Life.','warn');continue;}
+        if(gzManualOffConfirmedG(rec,st,p,Date.now())){
           // Seul le OFF réellement observé après un ON dans cette même session déclenche une pause.
-          const paused=await gzPauseConfirmedG(i,decision.reason,decision.remainingSec); if(paused){const msg=speechPosteName(p.num)+' mis en pause automatiquement : '+decision.reason+'. Reprise manuelle requise.';setStatusBanner('⏸ '+msg,'warn');gzTextVoiceNotify('GameZone — Pause automatique',msg,msg);}
+          const paused=await gzPauseConfirmedG(i); if(paused){const msg=speechPosteName(p.num)+' mis en pause automatiquement : prise éteinte ou débranchée.';setStatusBanner('⏸ '+msg,'warn');gzTextVoiceNotify('GameZone — Pause automatique',msg,msg);}
         }
       }
     }catch(e){setStatusBanner('☁️ Service Tuya indisponible : aucune pause automatique, minuteurs conservés.','warn');}
@@ -3913,7 +3920,7 @@ window.GymProofFree=(function(){
     if(gymProofMode!=='video'||!gymProofFile)return showToast('🎥 Filme une vidéo d’abord');
     try{const result=await GZCameraProof.share(gymProofFile);if(result==='share')showToast('✅ Si la vidéo est sur Drive, colle son lien avant ACTIVER');if(result==='download')showToast('✅ Vidéo enregistrée : importe-la dans Drive, puis colle son lien');}catch(e){showToast('⚠️ '+e.message);}
   };
-  function ensureGymModalG(){if(document.getElementById('mo-gym-g'))return;const m=document.createElement('div');m.className='mo';m.id='mo-gym-g';m.innerHTML=`<div class="ms"><div class="mh"></div><div class="mt" style="color:#22c55e">🏃 CASE 8 — GYMNASTIQUE</div><div class="ig"><label>Nom du client</label><input id="gym-client-g" type="text" placeholder="Nom du client" autocomplete="off"></div><div class="ig"><label>Mouvement</label><div id="gym-moves-g" class="gym-opt-grid"></div></div><div class="ig"><label>Durée</label><div id="gym-time-g" class="gym-opt-grid"></div></div><div class="ig"><label>Paiement</label><div id="gym-pay-g" class="gym-opt-grid"></div></div><div class="gym-proof-box"><b>📸 Preuve obligatoire avant validation</b><div>Photo ou vidéo FILMÉE MAINTENANT obligatoire. PHOTO : sauvegardée en petit JPEG dans Firebase. VIDÉO : filmer ici, puis partager vers Google Drive et coller le lien.</div><div class="gym-proof-actions"><button type="button" onclick="gymCapturePhotoG()">📸 PRENDRE PHOTO</button><button type="button" onclick="gymCaptureVideoG()">🎥 FILMER VIDÉO</button></div><div id="gym-capture-preview-g" style="display:none"></div><div id="gym-drive-zone-g" style="display:none"><button type="button" class="gym-video-share" onclick="gymShareVideoG()" style="display:block;width:100%;padding:10px;border:0;border-radius:8px;margin:6px 0">📤 PARTAGER / ENREGISTRER MA VIDÉO</button><a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener" style="color:#93c5fd">Ouvrir Google Drive pour déposer la vidéo</a><div style="margin:6px 0">Partage la vidéo seulement avec le patron et le gérant, puis colle le lien ici.</div><input type="url" id="gym-drive-url-g" style="width:100%;border-radius:7px;padding:10px;background:#1e293b;color:white" placeholder="https://drive.google.com/file/d/..."></div><div id="gym-proof-name-g" class="gym-proof-name">Aucune preuve capturée</div></div><div id="gym-result-g" role="status" aria-live="polite" style="font-size:13px;line-height:1.5;white-space:normal;color:#fbbf24;margin:10px 0"></div><div class="ma"><button class="btn-cancel" onclick="closeModal('mo-gym-g')">Retour</button><button class="btn-ok" onclick="gymConfirmStartG()">ACTIVER ✓</button></div></div>`;document.body.appendChild(m);
+  function ensureGymModalG(){if(document.getElementById('mo-gym-g'))return;const m=document.createElement('div');m.className='mo';m.id='mo-gym-g';m.innerHTML=`<div class="ms"><div class="mh"></div><div class="mt" style="color:#22c55e">🏃 CASE 8 — GYMNASTIQUE</div><div class="ig"><label>Nom du client</label><input id="gym-client-g" type="text" placeholder="Nom du client" autocomplete="off"></div><div class="ig"><label>Mouvement</label><div id="gym-moves-g" class="gym-opt-grid"></div></div><div class="ig"><label>Durée</label><div id="gym-time-g" class="gym-opt-grid"></div></div><div class="ig"><label>Paiement</label><div id="gym-pay-g" class="gym-opt-grid"></div></div><div class="gym-proof-box"><b>📸 Preuve obligatoire avant validation</b><div>Photo ou vidéo FILMÉE MAINTENANT obligatoire. PHOTO : sauvegardée en petit JPEG dans Firebase. VIDÉO : filmer ici, puis partager vers Google Drive et coller le lien.</div><div class="gym-proof-actions"><button type="button" onclick="gymCapturePhotoG()">📸 PRENDRE PHOTO</button><button type="button" onclick="gymCaptureVideoG()">🎥 FILMER VIDÉO</button></div><div id="gym-capture-preview-g" style="display:none"></div><div id="gym-drive-zone-g" style="display:none"><button type="button" class="gym-video-share" onclick="gymShareVideoG()" style="display:block;width:100%;padding:10px;border:0;border-radius:8px;margin:6px 0">📤 PARTAGER / ENREGISTRER MA VIDÉO</button><a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener" style="color:#93c5fd">Ouvrir Google Drive pour déposer la vidéo</a><div style="margin:6px 0">Partage la vidéo seulement avec le patron et le gérant, puis colle le lien ici.</div><input type="url" id="gym-drive-url-g" style="width:100%;border-radius:7px;padding:10px;background:#1e293b;color:white" placeholder="https://drive.google.com/file/d/..."></div><div id="gym-proof-name-g" class="gym-proof-name">Aucune preuve capturée</div></div><div class="ma"><button class="btn-cancel" onclick="closeModal('mo-gym-g')">Retour</button><button class="btn-ok" onclick="gymConfirmStartG()">ACTIVER ✓</button></div></div>`;document.body.appendChild(m);
     
   }
   function fillGymModalG(){ensureGymModalG();document.getElementById('gym-client-g').value='';gymMin=30;gymPay='especes';gymMove=GYM_MOVES[0];gymProofFile=null;gymProofMode='photo';document.getElementById('gym-drive-zone-g').style.display='none';document.getElementById('gym-drive-url-g').value='';{const pv=document.getElementById('gym-capture-preview-g');if(pv.dataset.blobUrl){URL.revokeObjectURL(pv.dataset.blobUrl);delete pv.dataset.blobUrl;}pv.innerHTML='';pv.style.display='none';}document.getElementById('gym-proof-name-g').textContent='Aucune preuve capturée';document.getElementById('gym-moves-g').innerHTML=GYM_MOVES.map((x,i)=>`<button type="button" class="gym-opt ${i===0?'sel':''}" onclick="gymSelectMoveG(this)" data-v="${esc2(x)}">${esc2(x)}</button>`).join('');document.getElementById('gym-time-g').innerHTML=GYM_TARIFFS.map((x,i)=>`<button type="button" class="gym-opt ${i===0?'sel':''}" onclick="gymSelectTimeG(${x.min},this)">${x.lbl}<small>${x.prix} F</small></button>`).join('');document.getElementById('gym-pay-g').innerHTML=PAYS.map((x,i)=>`<button type="button" class="gym-opt ${i===0?'sel':''}" onclick="gymSelectPayG('${x.id}',this)">${x.emoji} ${x.lbl}</button>`).join('');}
@@ -3922,19 +3929,8 @@ window.GymProofFree=(function(){
   window.gymSelectTimeG=function(min,el){gymMin=Math.max(1,Number(min)||30);document.querySelectorAll('#gym-time-g .gym-opt').forEach(z=>z.classList.remove('sel'));el.classList.add('sel');};
   window.gymSelectPayG=function(id,el){gymPay=id||'especes';document.querySelectorAll('#gym-pay-g .gym-opt').forEach(z=>z.classList.remove('sel'));el.classList.add('sel');};
 
-  window.gymOpenG=function(){try{if(gymState().actif)return;fillGymModalG();openModal('mo-gym-g');}catch(e){console.error(e);showToast('Gymnastique : '+e.message);}};
-  function gymStartStatusG(msg){const status=document.getElementById('gym-result-g');if(status)status.textContent=msg;return showToast(msg);}
-  const gymConfirmStartImplG=async function(){const nom=(document.getElementById('gym-client-g').value||'').trim();if(!nom)return gymStartStatusG('⚠️ Entrez le nom du client');if(!gymProofFile)return gymStartStatusG('📸 Prends une photo ou filme une vidéo avec la caméra avant ACTIVER');if(gymProofMode==='video'&&!document.getElementById('gym-drive-url-g').value.trim())return gymStartStatusG('🎥 Colle le lien Drive de la vidéo que tu viens de filmer');const tar=gymTariff(gymMin);if(!tar)return;const now=Date.now(),sid='GYM-'+now+'-'+Math.random().toString(36).slice(2,7);gymStartStatusG('⏳ Envoi de la preuve...');try{const proof=await uploadGymProofG(gymProofFile,sid);const st={actif:true,client:nom,mouvement:gymMove,finTs:now+gymMin*60000,tempsTotal:gymMin*60,dureeMin:gymMin,paused:false,pauseRemainingSec:0,montantSession:tar.prix,ventesParJour:{[businessDateKey(new Date(now))]:tar.prix},paiement:gymPay,sessionId:sid,startedAt:now,updatedAt:now,preuveUrl:proof.url,preuvePath:proof.path,preuveKind:proof.kind,preuveType:proof.type,preuveNom:proof.name};const tx=await fbRoot.transaction(root=>{root=root||{};if(root.gym&&root.gym.actif)return undefined;root.gym=st;const ss=freshSessionSnapshotFromRoot(root);ss.recettes=money(ss.recettes)+tar.prix;ss.parPoste['Gymnastique']=money(ss.parPoste['Gymnastique'])+tar.prix;ss.sessionsParPoste['Gymnastique']=Math.max(0,Number(ss.sessionsParPoste['Gymnastique'])||0)+1;ss.payStats[gymPay]=money(ss.payStats[gymPay])+tar.prix;root.sessions=ss;root.daily=root.daily||{};root.daily[businessDateKey(new Date())]=deepClone(ss);return root;});if(!tx||!tx.committed)return gymStartStatusG('⚠️ Gym déjà occupé');DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();addJournal('g','🏃 Gymnastique — Session démarrée',nom+' · '+gymMove+' · '+gymMin+' min · preuve photo/vidéo enregistrée',tar.prix+' F','',{poste:'Gymnastique',client:nom,sessionId:sid,typeActivite:'gym_demarrage',mouvement:gymMove,dureeSec:gymMin*60,montant:tar.prix,preuveUrl:proof.url,preuvePath:proof.path,preuveKind:proof.kind,preuveSalle:currentTenantKey,preuveType:proof.type,heureDebut:now,heureFinPrevue:now+gymMin*60000});gzSpeak('Gymnastique activée pour '+gymMin+' minutes.');closeModal('mo-gym-g');gymStartStatusG('✅ Gym '+gymMin+' min activé');renderPostes();updateStats();}catch(e){console.log(e);gymStartStatusG('⚠️ '+(e.message||'Activation gym impossible'));}};
-  let gymStartBusyG=false;
-  window.gymConfirmStartG=async function(){
-    if(gymStartBusyG)return;
-    gymStartBusyG=true;
-    const btn=document.querySelector('#mo-gym-g .btn-ok'),status=document.getElementById('gym-result-g');
-    if(btn){btn.disabled=true;btn.textContent='VALIDATION EN COURS…';}
-    if(status)status.textContent='Enregistrement de la preuve et de la séance…';
-    try{return await gymConfirmStartImplG();}
-    finally{gymStartBusyG=false;if(btn){btn.disabled=false;btn.textContent='ACTIVER ✓';}}
-  };
+  window.gymOpenG=function(){if(gymState().actif)return;fillGymModalG();openModal('mo-gym-g');};
+  window.gymConfirmStartG=async function(){const nom=(document.getElementById('gym-client-g').value||'').trim();if(!nom)return showToast('⚠️ Entrez le nom du client');if(!gymProofFile)return showToast('📸 Prends une photo ou filme une vidéo avec la caméra avant ACTIVER');if(gymProofMode==='video'&&!document.getElementById('gym-drive-url-g').value.trim())return showToast('🎥 Colle le lien Drive de la vidéo que tu viens de filmer');const tar=gymTariff(gymMin);if(!tar)return;const now=Date.now(),sid='GYM-'+now+'-'+Math.random().toString(36).slice(2,7);showToast('⏳ Envoi de la preuve...');try{const proof=await uploadGymProofG(gymProofFile,sid);const st={actif:true,client:nom,mouvement:gymMove,finTs:now+gymMin*60000,tempsTotal:gymMin*60,dureeMin:gymMin,paused:false,pauseRemainingSec:0,montantSession:tar.prix,ventesParJour:{[businessDateKey(new Date(now))]:tar.prix},paiement:gymPay,sessionId:sid,startedAt:now,updatedAt:now,preuveUrl:proof.url,preuvePath:proof.path,preuveKind:proof.kind,preuveType:proof.type,preuveNom:proof.name};const tx=await fbRoot.transaction(root=>{root=root||{};if(root.gym&&root.gym.actif)return undefined;root.gym=st;const ss=freshSessionSnapshotFromRoot(root);ss.recettes=money(ss.recettes)+tar.prix;ss.parPoste['Gymnastique']=money(ss.parPoste['Gymnastique'])+tar.prix;ss.sessionsParPoste['Gymnastique']=Math.max(0,Number(ss.sessionsParPoste['Gymnastique'])||0)+1;ss.payStats[gymPay]=money(ss.payStats[gymPay])+tar.prix;root.sessions=ss;root.daily=root.daily||{};root.daily[businessDateKey(new Date())]=deepClone(ss);return root;});if(!tx||!tx.committed)return showToast('⚠️ Gym déjà occupé');DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();addJournal('g','🏃 Gymnastique — Session démarrée',nom+' · '+gymMove+' · '+gymMin+' min · preuve photo/vidéo enregistrée',tar.prix+' F','',{poste:'Gymnastique',client:nom,sessionId:sid,typeActivite:'gym_demarrage',mouvement:gymMove,dureeSec:gymMin*60,montant:tar.prix,preuveUrl:proof.url,preuvePath:proof.path,preuveKind:proof.kind,preuveSalle:currentTenantKey,preuveType:proof.type,heureDebut:now,heureFinPrevue:now+gymMin*60000});gzSpeak('Gymnastique activée pour '+gymMin+' minutes.');closeModal('mo-gym-g');showToast('✅ Gym '+gymMin+' min activé');renderPostes();updateStats();}catch(e){console.log(e);showToast('⚠️ '+(e.message||'Activation gym impossible'));}};
   window.gymPauseG=async function(){const g=gymState();if(!g.actif||g.paused)return;const rest=gymRest(g);try{const tx=await fbRoot.transaction(root=>{root=root||{};if(!root.gym||!root.gym.actif)return undefined;root.gym=Object.assign({},root.gym,{paused:true,pauseRemainingSec:rest,finTs:0,updatedAt:Date.now()});return root;});if(tx&&tx.committed){DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();gzSpeak('Gymnastique, temps mis en pause.');addJournal('y','🏃 Gymnastique — Pause',(g.client||'Client')+' · '+gymFmt(rest)+' restantes','');renderPostes();}}catch(e){showToast('⚠️ Pause gym impossible');}};
   window.gymResumeG=async function(){const g=gymState();if(!g.actif||!g.paused)return;const rest=Math.max(1,Number(g.pauseRemainingSec)||0);try{const tx=await fbRoot.transaction(root=>{root=root||{};if(!root.gym||!root.gym.actif||!root.gym.paused)return undefined;root.gym=Object.assign({},root.gym,{paused:false,pauseRemainingSec:0,finTs:Date.now()+rest*1000,updatedAt:Date.now()});return root;});if(tx&&tx.committed){DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();gzSpeak('Gymnastique, temps repris.');addJournal('g','🏃 Gymnastique — Reprise',g.client||'Client','');renderPostes();}}catch(e){showToast('⚠️ Reprise gym impossible');}};
   window.gymPlusG=async function(min){const g=gymState();if(!g.actif)return;const tar=gymTariff(min);if(!tar)return;try{const tx=await fbRoot.transaction(root=>{root=root||{};const x=root.gym||{};if(!x.actif)return undefined;const u=Object.assign({},x);if(u.paused)u.pauseRemainingSec=(Number(u.pauseRemainingSec)||0)+min*60;else u.finTs=(Number(u.finTs)||Date.now())+min*60000;u.tempsTotal=(Number(u.tempsTotal)||0)+min*60;u.montantSession=money(u.montantSession)+tar.prix;const dayKey=businessDateKey(new Date());
@@ -3943,9 +3939,8 @@ window.GymProofFree=(function(){
     u.ventesParJour[dayKey]=money(u.ventesParJour[dayKey])+tar.prix;
     u.updatedAt=Date.now();root.gym=u;const ss=freshSessionSnapshotFromRoot(root);ss.recettes=money(ss.recettes)+tar.prix;ss.parPoste['Gymnastique']=money(ss.parPoste['Gymnastique'])+tar.prix;ss.payStats[g.paiement||'especes']=money(ss.payStats[g.paiement||'especes'])+tar.prix;root.sessions=ss;root.daily=root.daily||{};root.daily[businessDateKey(new Date())]=deepClone(ss);return root;});if(tx&&tx.committed){DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();gzSpeak('Gymnastique, '+min+' minutes supplémentaires ajoutées.');addJournal('b','🏃 Gymnastique — Temps ajouté',(g.client||'Client')+' · +'+min+' min',tar.prix+' F');showToast('✅ +'+min+' min Gym');renderPostes();updateStats();}}catch(e){showToast('⚠️ Ajout temps Gym impossible');}};
 
-  window.gymFinishKeepingRevenueG=async function(){const g=gymState();if(!g.actif||!fbRoot)return;if(!confirm('Arrêter le temps Gymnastique ? La recette reste conservée.'))return;try{const tx=await fbRoot.transaction(root=>{root=root||{};const x=root.gym||{};if(!x.actif||x.sessionId!==g.sessionId)return undefined;root.gym=Object.assign({},x,{actif:false,paused:false,finTs:0,pauseRemainingSec:0,endedAt:Date.now(),updatedAt:Date.now()});const ss=freshSessionSnapshotFromRoot(root);ss.count=Math.max(0,Number(ss.count)||0)+1;root.sessions=ss;root.daily=root.daily||{};root.daily[businessDateKey(new Date())]=deepClone(ss);return root;});if(!tx||!tx.committed)return showToast('Séance modifiée ailleurs');DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();addJournal('r','Gymnastique — Temps arrêté, recette conservée',g.client||'Client',money(g.montantSession)+' F');gzSpeak('Gymnastique, temps terminé. Recette conservée.');renderPostes();updateStats();}catch(e){showToast('Arrêt Gym impossible : '+e.message);}};
-  function renderGymCardG(){const grid=document.getElementById('postes-grid');if(!grid)return;const old=document.getElementById('gym-card-g'),g=gymState(),rest=gymRest(g),expired=g.actif&&rest===0;const sig=JSON.stringify(g)+'|'+expired;if(old&&old.dataset.gymState===sig){const clock=old.querySelector('.gz-gym-clock');if(clock)clock.textContent=g.actif?gymFmt(rest):'00:00';const fill=old.querySelector('.gz-yellow-fill');if(fill){fill.style.width=(g.actif&&Number(g.tempsTotal)>0?Math.min(100,Math.max(0,rest/Number(g.tempsTotal)*100)):0)+'%';fill.className='gz-yellow-fill '+(g.actif?gzProgressTone(rest,!!g.paused):'');}return;}if(old)old.remove();const card=document.createElement('div');card.dataset.gymState=sig;card.id='gym-card-g';card.className='gym-card '+(g.actif?(g.paused?'paused':'active'):'');const proof=GymProofFree.cardHtml(g,currentTenantKey);card.innerHTML=`<div class="gym-head"><div><b>🏃 CASE 8 — GYMNASTIQUE</b><small>Vélo · Abdos · Jambes · Bras</small></div><span>${g.paused?'PAUSE':(g.actif?'EN COURS':'LIBRE')}</span></div><div class="gz-gym-remaining-label">⏱ TEMPS RESTANT — ${g.paused?'EN PAUSE':'DÉCOMPTE ACTIF'}</div><div class="gym-timer-row"><strong class="gz-gym-clock">${g.actif?gymFmt(rest):'00:00'}</strong><em>${g.actif?money(g.montantSession)+' F':''}</em></div><div class="gz-yellow-progress"><div class="gz-yellow-fill ${g.actif?gzProgressTone(rest,!!g.paused):''}" style="width:${g.actif&&Number(g.tempsTotal)>0?Math.min(100,Math.max(0,rest/Number(g.tempsTotal)*100)).toFixed(2):0}%"></div></div><div class="gym-client">${g.actif?esc2(g.client||'Client')+' · '+esc2(g.mouvement||'Gymnastique'):'Disponible · 30 min = 100 F · 1 h = 200 F'}</div>${proof}<div class="gym-actions">${expired?'<span>⏳ Temps terminé — libération automatique</span>':!g.actif?`<button onclick="gymOpenG()">DÉMARRER</button>`:(g.paused?`<button class="gz-gym-action" onclick="gymResumeG()">▶ REPRENDRE</button>`:`<button class="gz-gym-action" onclick="gymPauseG()">⏸ PAUSE</button>`)}${g.actif&&!expired?`<button class="gz-gym-action" onclick="gymPlusG(30)">+ 30 min / 100 F</button><button class="gz-gym-action" onclick="gymPlusG(60)">+ 1 h / 200 F</button><button class="gz-gym-action" onclick="gymFinishKeepingRevenueG()">ARRÊTER LE TEMPS · recette conservée</button>`:''}</div><div class="gym-no-cancel">🔒 Annulation réservée au Patron.</div>`;grid.appendChild(card);}
-  const oldRender=window.renderPostes;window.renderPostes=function(){const gymSaved=document.getElementById('gym-card-g');const r=oldRender&&oldRender.apply(this,arguments);if(gymSaved&&!document.getElementById('gym-card-g')){const grid=document.getElementById('postes-grid');if(grid)grid.appendChild(gymSaved);}try{document.querySelectorAll('#postes-grid .pc').forEach(c=>{const b=c.querySelector('.pb-off'),t=c.querySelector('.pc-type');if(b&&t&&!/LIBRE/i.test(t.textContent))t.textContent=t.textContent+' · LIBRE';});renderGymCardG();}catch(e){console.log(e);}return r;};
+  function renderGymCardG(){const grid=document.getElementById('postes-grid');if(!grid)return;const old=document.getElementById('gym-card-g');if(old)old.remove();const g=gymState(),rest=gymRest(g),expired=g.actif&&rest===0,card=document.createElement('div');card.id='gym-card-g';card.className='gym-card '+(g.actif?(g.paused?'paused':'active'):'');const proof=GymProofFree.cardHtml(g,currentTenantKey);card.innerHTML=`<div class="gym-head"><div><b>🏃 CASE 8 — GYMNASTIQUE</b><small>Vélo · Abdos · Jambes · Bras</small></div><span>${g.paused?'PAUSE':(g.actif?'EN COURS':'LIBRE')}</span></div><div class="gz-gym-remaining-label">⏱ TEMPS RESTANT — ${g.paused?'EN PAUSE':'DÉCOMPTE ACTIF'}</div><div class="gym-timer-row"><strong class="gz-gym-clock">${g.actif?gymFmt(rest):'00:00'}</strong><em>${g.actif?money(g.montantSession)+' F':''}</em></div><div class="gz-yellow-progress"><div class="gz-yellow-fill ${g.actif?gzProgressTone(rest,!!g.paused):''}" style="width:${g.actif&&Number(g.tempsTotal)>0?Math.min(100,Math.max(0,rest/Number(g.tempsTotal)*100)).toFixed(2):0}%"></div></div><div class="gym-client">${g.actif?esc2(g.client||'Client')+' · '+esc2(g.mouvement||'Gymnastique'):'Disponible · 30 min = 100 F · 1 h = 200 F'}</div>${proof}<div class="gym-actions">${expired?'<span>⏳ Temps terminé — libération automatique</span>':!g.actif?`<button onclick="gymOpenG()">DÉMARRER</button>`:(g.paused?`<button class="gz-gym-action" onclick="gymResumeG()">▶ REPRENDRE</button>`:`<button class="gz-gym-action" onclick="gymPauseG()">⏸ PAUSE</button>`)}${g.actif&&!expired?`<button class="gz-gym-action" onclick="gymPlusG(30)">+ 30 min / 100 F</button><button class="gz-gym-action" onclick="gymPlusG(60)">+ 1 h / 200 F</button>`:''}</div><div class="gym-no-cancel">🔒 Annulation réservée au Patron.</div>`;grid.appendChild(card);}
+  const oldRender=window.renderPostes;window.renderPostes=function(){const r=oldRender&&oldRender.apply(this,arguments);try{document.querySelectorAll('#postes-grid .pc').forEach(c=>{const b=c.querySelector('.pb-off'),t=c.querySelector('.pc-type');if(b&&t&&!/LIBRE/i.test(t.textContent))t.textContent=t.textContent+' · LIBRE';});renderGymCardG();}catch(e){console.log(e);}return r;};
 
   async function finishGymIfNeededG(){if(gymTimerBusy)return;const g=gymState();if(!g.actif||gymRest(g)>0)return;gymTimerBusy=true;try{const sid=g.sessionId||'';const tx=await fbRoot.transaction(root=>{root=root||{};const x=root.gym||{};if(!x.actif||(sid&&x.sessionId&&x.sessionId!==sid))return undefined;root.gym=Object.assign({},x,{actif:false,finTs:0,paused:false,pauseRemainingSec:0,updatedAt:Date.now(),endedAt:Date.now()});const ss=freshSessionSnapshotFromRoot(root);ss.count=Math.max(0,Number(ss.count)||0)+1;root.sessions=ss;root.daily=root.daily||{};root.daily[businessDateKey(new Date())]=deepClone(ss);return root;});if(tx&&tx.committed){DB._cache=tx.snapshot.val()||DB._cache;syncGymSessionTotalsG();gzSpeak('Gymnastique, temps terminé.');addJournal('r','🏃 Gymnastique — Temps écoulé',(g.client||'Client')+' · '+(g.mouvement||'Gymnastique')+' · session terminée',money(g.montantSession)+' F','',{poste:'Gymnastique',client:g.client||'',sessionId:sid,typeActivite:'gym_terminee',mouvement:g.mouvement||'',preuveUrl:g.preuveUrl||'',preuvePath:g.preuvePath||'',preuveKind:g.preuveKind||'',preuveSalle:currentTenantKey});renderPostes();updateStats();}}catch(e){console.log('Fin gym:',e);}finally{gymTimerBusy=false;}}
   setInterval(()=>{try{if(loggedIn){finishGymIfNeededG();const c=document.getElementById('gym-card-g');if(c)renderGymCardG();}}catch(_e){}},1000);
@@ -3980,16 +3975,14 @@ window.GymProofFree=(function(){
       throw new Error('Utilise le site HTTPS, et sur iPhone installe GameZone sur l’écran d’accueil.');
     // iPhone Safari exige le clic utilisateur DIRECT pour la demande d'autorisation.
     const permission=await Notification.requestPermission();
-    if(permission!=='granted')throw new Error(permission==='denied'?'Notifications bloquées pour ce site. Ouvre GameZone directement dans Chrome, puis paramètres du site > Notifications > Autoriser. Sur iPhone, ouvre GameZone depuis son icône sur l’écran d’accueil.':'Autorisation non accordée. Ouvre GameZone dans ton navigateur habituel puis clique à nouveau la cloche et autorise les notifications.');
+    if(permission!=='granted')throw new Error('Autorisation refusée par le téléphone.');
     const token=await firebaseLoginToken();
     if(!token)throw new Error('Connecte-toi à la salle GameZone avant d’activer les notifications.');
     const keyReq=await fetch(WORKER_URL+'/?action=pushKey',{cache:'no-store'});
     const keyData=await keyReq.json();
     if(!keyData.success||!keyData.key)throw new Error('Le serveur de notifications n’est pas encore configuré.');
-    let readyTimer,reg;
-    try{reg=await Promise.race([navigator.serviceWorker.ready,new Promise((_,reject)=>{readyTimer=setTimeout(()=>reject(new Error('Service de notifications non prêt. Recharge le site dans ton navigateur habituel puis réessaie.')),12000);})]);}finally{clearTimeout(readyTimer);}
+    const reg=await navigator.serviceWorker.ready;
     let sub=await reg.pushManager.getSubscription();
-    if(sub&&sub.options.applicationServerKey){const old=new Uint8Array(sub.options.applicationServerKey),current=keyBytes(keyData.key);if(old.length!==current.length||old.some((b,i)=>b!==current[i])){await sub.unsubscribe();sub=null;}}
     if(!sub)sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:keyBytes(keyData.key)});
     const resp=await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
       body:JSON.stringify({tenantKey:'GZ-07732',action:'subscribePush',subscription:sub.toJSON(),url:location.href.split(/[?#]/)[0],role:ROLE})});
@@ -4015,95 +4008,5 @@ window.GymProofFree=(function(){
   else setTimeout(bind,0);
 })();
 </script>
-<script>
-// SYNC8: OFF is retried only by an explicit user action, never from an old queue.
-(function(){
- const gerant=true;
- window.gzRecordPausePower=async function(poste,index,confirmed){
-  if(!fbRoot)return;
-  const result=await fbRoot.transaction(root=>{root=root||{};const live=rootReadActive(root,poste,index)||{};
-    if(!live.actif||!live.paused||live.sessionId!==poste.sessionId)return undefined;
-    rootWriteActive(root,poste,index,{...live,pausePowerOffConfirmed:confirmed===true,pausePowerCheckedAt:Date.now(),updatedAt:Date.now()});return root;},undefined,false);
-  if(result&&result.snapshot){if(gerant)syncFromTransactionResult(result);else{DB._cache=result.snapshot.val()||DB._cache;renderControl();}}
- };
- const busy=new Set();
- window.gzRetryPausedPower=async function(index){
-  if(busy.has(index)||!fbRoot)return;busy.add(index);
-  try{
-    const snapshot=await fbRoot.once('value'),root=snapshot.val()||{},p=(root.postes||[])[index];
-    if(!p)return showToast('Poste introuvable');
-    const live=rootReadActive(root,p,index)||{};
-    if(!live.actif||!live.paused)return showToast('Le poste a changé : aucune commande OFF envoyée.');
-    const entry={...p,sessionId:live.sessionId};
-    const ok=gerant?await eteindrePrise(entry,'pause'):await ownerReliableOff(entry);
-    await gzRecordPausePower(entry,index,ok);
-    showToast(ok?'✅ Prise éteinte : temps toujours en pause.':'⚠️ OFF non confirmé. Vérifie cette prise dans Smart Life.');
-  }catch(e){showToast('OFF non confirmé : '+String(e.message||e).slice(0,110));}
-  finally{busy.delete(index);}
- };
-})();
-</script>
-
-<script>
-// TUYA11: no local clock is frozen before the server confirms relay OFF.
-(function(){
- const gerant=true,requests=new Map(),inFlight=new Set();
- window.gzPauseViaServer=async function(index,retryOnly=false){
-  if(inFlight.has(index)||!fbRoot)return false;
-  const list=gerant?postes:(DB.get('postes')||[]),post=list[index];
-  const state=gerant?post:(post&&activeForPoste(post,index));
-  if(!post||!state||!state.actif||!state.sessionId)return showToast('Séance introuvable : actualise les postes.');
-  if(retryOnly&&!state.paused)return showToast('Séance reprise : aucune nouvelle commande OFF envoyée.');
-  const key=post.num+'|'+state.sessionId;
-  if(!requests.has(key))requests.set(key,typeof crypto.randomUUID==='function'?crypto.randomUUID():('P'+Date.now()+'-'+Math.random().toString(36).slice(2,12)));
-  const operationId=requests.get(key);inFlight.add(index);
-  showToast('Extinction de '+post.num+' en cours… Le temps continue jusqu’à confirmation.');
-  const ctrl=new AbortController();let timeout=setTimeout(()=>ctrl.abort(),30000);
-  try{
-    const token=gerant?await ensureFirebaseToken():await firebase.auth().currentUser.getIdToken();
-    const sendPause=offlineConfirmed=>fetch(TUYA_WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+token},body:JSON.stringify({tenantKey:currentTenantKey,action:'pauseConfirmed',posteNum:post.num,sessionId:state.sessionId,operationId,retryOnly,offlineConfirmed}),signal:ctrl.signal});
-    let response=await sendPause(false),result=await response.json();
-    if(result.offlinePauseAvailable&&!retryOnly){
-      clearTimeout(timeout);
-      if(!confirm(post.num+' : prise hors ligne. Confirme que la télévision est débranchée ou sans courant. Mettre le temps restant en pause ? L’application ne peut pas confirmer l’extinction. La reprise sera manuelle.'))return false;
-      timeout=setTimeout(()=>ctrl.abort(),30000);
-      response=await sendPause(true);result=await response.json();
-    }
-    if(!response.ok||!result.success||(!result.powerOffConfirmed&&!result.manualOffline))throw Error(result.error||'Extinction non confirmée : pause non validée.');
-    const pauseLabel=result.manualOffline?'Pause manuelle — prise hors ligne':'Pause après extinction confirmée';
-    DB._cache.active_by_poste={...(DB._cache.active_by_poste||{}),[remotePostKey(post.num)]:result.state};
-    if(gerant){refreshFromRemote();if(!result.duplicate)addJournal('y',post.num+' — '+pauseLabel,state.client||'Client','');gzSpeak(speechPosteName(post.num)+(result.manualOffline?', temps en pause manuelle. Extinction non vérifiable.':', télévision éteinte et temps en pause.'));}
-    else{renderControl();if(!result.duplicate)ownerPersistActivity(post.num+' — '+pauseLabel,state.client||'Client','',{poste:post.num,sessionId:state.sessionId,typeActivite:'pause'});ownerSpeak(ownerSpeechPosteName(post.num)+(result.manualOffline?', temps en pause manuelle. Extinction non vérifiable.':', télévision éteinte et temps en pause.'));}
-    requests.delete(key);showToast('✅ '+post.num+(result.manualOffline?' : temps en pause manuelle, extinction non vérifiable.':' : prise OFF confirmée, temps en pause.'));return true;
-  }catch(e){showToast(e.name==='AbortError'?'Confirmation non reçue : vérifie l’état synchronisé puis réessaie Pause.':String(e.message||e));return false;}
-  finally{clearTimeout(timeout);inFlight.delete(index);if(gerant&&fbForcePoll)fbForcePoll();}
- };
- window.gzRetryPausedPower=index=>window.gzPauseViaServer(index,true);
-})();
-</script>
-
-
-<script>
-// AUTO16: server confirms physical state before closing or resuming a session.
-(function(){
- const gerant=true,attempts=new Map();
- window.gzConfirmFinish16=async function(post,state){
-  const key=post.num+'|'+state.sessionId,now=Date.now();if(now-(attempts.get(key)||0)<10000)return false;attempts.set(key,now);
-  try{await request('finishConfirmed',post,state);return true;}catch(e){showToast('⚠️ '+post.num+' : temps terminé, extinction non confirmée. '+e.message);return false;}
- };
- async function request(action,post,state){
-  const token=gerant?await ensureFirebaseToken():await firebase.auth().currentUser.getIdToken();
-  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),30000);
-  try{const r=await fetch(TUYA_WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+token},body:JSON.stringify({tenantKey:currentTenantKey,action,posteNum:post.num,sessionId:state.sessionId}),signal:ctrl.signal}),v=await r.json();if(!r.ok||!v.success||!(action==='finishConfirmed'?v.powerOffConfirmed:v.powerOnConfirmed))throw Error(v.error||'Commande non confirmée');return v;}finally{clearTimeout(timer);}
- }
- const resuming=new Set();
- async function resume(index){
-  if(resuming.has(index))return;const posts=gerant?postes:(DB.get('postes')||[]),post=posts[index],st=gerant?post:(post&&activeForPoste(post,index));if(!st?.actif||!st.paused)return;
-  resuming.add(index);try{const v=await request('resumeConfirmed',post,st);DB._cache.active_by_poste={...(DB._cache.active_by_poste||{}),[remotePostKey(post.num)]:v.state};if(gerant){refreshFromRemote();gzSpeak(speechPosteName(post.num)+', temps repris.');}else{renderControl();ownerSpeak(ownerSpeechPosteName(post.num)+', temps repris.');}showToast('▶ '+post.num+' : reprise confirmée');}catch(e){showToast('⚠️ '+e.message);}finally{resuming.delete(index);}
- }
- if(gerant)reprendrePoste=resume;else ownerResume=resume;
-})();
-</script>
-
 </body>
 </html>
